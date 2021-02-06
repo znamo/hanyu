@@ -8,15 +8,9 @@ import Select from '@material-ui/core/Select';
 import Checkbox from '@material-ui/core/Checkbox';
 import Chip from '@material-ui/core/Chip';
 import {FormControlLabel, FormGroup, FormLabel} from "@material-ui/core";
-import {UnitsProps, UnitProps} from "../../types";
+import {ControlOptionsProps, UnitProps} from "../../types";
 
-const ControlOptions: React.FC<UnitsProps> = ({units}) => {
-    const [state, setState] = React.useState(units);
-
-    const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-        setState({...state, [event.target.name]: event.target.checked});
-    };
-
+const ControlOptions: React.FC<ControlOptionsProps> = ({units, handleChange}) => {
     return (
         <FormControl component="fieldset">
             <FormLabel component="legend">Units</FormLabel>

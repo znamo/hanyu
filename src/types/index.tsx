@@ -19,7 +19,7 @@ export interface UnitProps{
   include: boolean
 }
 
-export interface UnitsProps{
+export interface ControlOptionsProps{
   units: UnitProps[],
-  handler?: (event: React.ChangeEvent<HTMLInputElement>) => void
+  handleChange?: (event: React.ChangeEvent<HTMLInputElement>) => void
 }
