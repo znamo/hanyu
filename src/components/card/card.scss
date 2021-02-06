@@ -1,0 +1,17 @@
+.card-container{
+  border: 1px solid green;
+  display: flex;
+  flex-direction: column;
+
+  .character{
+    font-size: x-large;
+  }
+
+  .pinyin{
+
+  }
+
+  .meaning{
+    font-size: smaller;
+  }
+}

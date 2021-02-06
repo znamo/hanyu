@@ -1,13 +1,8 @@
-import React, { FunctionComponent } from 'react';
+import React from 'react';
+import {CardProps} from "../../types";
+import './card.scss'
 
-type CardProps = {
-  characters: string,
-  pinyin: string
-  meaning: string
-  type?: string
-}
-
-const Card: FunctionComponent<CardProps> = ({characters, pinyin, meaning, type}) => (
+const Card: React.FC<CardProps> = ({characters, pinyin, meaning, type}) => (
 <div className="card-container">
     <span className="character">{characters}</span>
     <span className="pinyin">{pinyin}</span>
