@@ -2,3 +2,11 @@
 //  max-width: 300px;
 //  zoom: 2;
 //}
+
+.opacity-text{
+  opacity: 0.001;
+
+  &:hover{
+    opacity: 1;
+  }
+}

@@ -37,6 +37,7 @@ function App() {
     };
 
     const cardList = includedUnits.reduce<CardProps[]>((acc, cur: UnitProps) => cur.include ? [...acc, ...cur.characters] : acc, []);
+    const randomCardList = cardList.sort(() => Math.random() - 0.5);
     return (
         <>
             <AppBar position="static">
@@ -54,9 +55,9 @@ function App() {
                 <Grid item xs={3}>
                     <ControlOptions units={includedUnits} handleChange={handleChange}/>
                 </Grid>
-                <Grid item xs={9}>
+                <Grid item xs={4}>
                     <div className="App">
-                        <CardCarousel cardList={cardList}/>
+                        <CardCarousel cardList={randomCardList}/>
                     </div>
                 </Grid>
             </Grid>
