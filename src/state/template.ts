@@ -23,6 +23,4 @@ const _UNIT_ = [
      generate('', '', '', ''),
 ];
 
-const unit = {name: '_UNIT_', characters: _UNIT_, include: false}
-
-export default unit;
+export default _UNIT_;

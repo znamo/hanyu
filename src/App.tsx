@@ -1,16 +1,8 @@
 import React, {useEffect} from 'react';
-import logo from './logo.svg';
 import './App.scss';
 import units from './state';
 import CardCarousel from "./components/card_carousel/cardCarousel";
 
-// function App() {
-//   return (
-//     <div className="App">
-//         <CardCarousel cardList={unit5}/>
-//     </div>
-//   );
-// }
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
@@ -20,7 +12,7 @@ import MenuIcon from '@material-ui/icons/Menu';
 import ControlOptions from "./components/control_options/control_options";
 import {CardProps, UnitProps} from "./types";
 import {CarouselProps} from "react-material-ui-carousel";
-import {Grid} from "@material-ui/core";
+import {Grid, Container} from "@material-ui/core";
 
 function App() {
     const unitsWithIncludeFlag = units.map(obj => ({...obj, include: true}))
@@ -51,17 +43,20 @@ function App() {
                 </Toolbar>
             </AppBar>
 
-            <Grid container spacing={1}>
-                <Grid item xs={3}>
-                    <ControlOptions units={includedUnits} handleChange={handleChange}/>
-                </Grid>
-                <Grid item xs={4}>
-                    <div className="App">
-                        <CardCarousel cardList={randomCardList}/>
-                    </div>
-                </Grid>
-            </Grid>
-        </>
+             <Container>
+                    <Grid container spacing={1}>
+                        <Grid item xs={3}>
+                            <ControlOptions units={includedUnits} handleChange={handleChange}/>
+                        </Grid>
+                        <Grid item xs={6}>
+                            <div className="App">
+                                <CardCarousel cardList={randomCardList}/>
+                            </div>
+                        </Grid>
+                    </Grid>
+            </Container>
+
+            </>
     );
 }
 

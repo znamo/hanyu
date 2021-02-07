@@ -22,6 +22,7 @@ const CardCarousel: React.FC<{ cardList: CardProps[], carouselOptions?: Carousel
     return (
         <>
             <MaterialCard.default variant="outlined">
+                HIDE
                 <CardContent>
                     <FormControlLabel
                         control={<Checkbox checked={hideFields.characters} onChange={handleChange} name="characters"
