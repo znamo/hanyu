@@ -1,23 +1,13 @@
 import React, {KeyboardEvent, MouseEvent, useState} from 'react';
-import './App.scss';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
-import IconButton from '@material-ui/core/IconButton';
-import MenuIcon from '@material-ui/icons/Menu';
-import FingerprintIcon from '@material-ui/icons/Fingerprint';
-import GridOnIcon from '@material-ui/icons/GridOn';
-import {Grid, Container, Drawer, List, ListItem, ListItemIcon, ListItemText, Divider} from "@material-ui/core";
 import {MemoryRouter as Router} from 'react-router'
-import {Link as RouterLink, LinkProps as RouterLinkProps, useHistory} from 'react-router-dom';
+import {Switch, Route} from "react-router-dom";
 import routes from 'routs'
-
-import {
-    Switch,
-    Route,
-    Link
-} from "react-router-dom";
 import Menu from "components/menu";
+import {Container, AppBar, Toolbar, IconButton} from "@material-ui/core";
+import {Menu as MenuIcon} from "@material-ui/icons";
+import Typography from '@material-ui/core/Typography';
+
+import './App.scss';
 
 
 function App() {

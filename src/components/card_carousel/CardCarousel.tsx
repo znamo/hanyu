@@ -1,11 +1,10 @@
 import React from 'react';
-import {CardProps, CardHidePropsDefaults} from "../../types";
-import * as MaterialCard from '@material-ui/core/Card';
-import Card from "../card2/Card";
-import Carousel from 'react-material-ui-carousel';
-import {CarouselProps} from 'react-material-ui-carousel';
+import Card from "components/card/Card";
+import {CardProps, CardHidePropsDefaults} from "types";
+import Carousel, {CarouselProps} from 'react-material-ui-carousel';
+import {CardContent, Checkbox, FormControlLabel, Card as MaterialCard} from "@material-ui/core";
 import './cardCarousel.scss';
-import {CardContent, Checkbox, FormControlLabel} from "@material-ui/core";
+
 
 const CardCarousel: React.FC<{ cardList: CardProps[], carouselOptions?: CarouselProps }> = ({
                                                                                                 cardList,
@@ -21,8 +20,8 @@ const CardCarousel: React.FC<{ cardList: CardProps[], carouselOptions?: Carousel
 
     return (
         <>
-            <MaterialCard.default variant="outlined">
-                HIDE
+            <MaterialCard variant="outlined">
+                Should Hide:
                 <CardContent>
                     <FormControlLabel
                         control={<Checkbox checked={hideFields.characters} onChange={handleChange} name="characters"
@@ -40,7 +39,7 @@ const CardCarousel: React.FC<{ cardList: CardProps[], carouselOptions?: Carousel
                         label="Type"/>
 
                 </CardContent>
-            </MaterialCard.default>
+            </MaterialCard>
             <Carousel indicators={false} autoPlay={false} animation="slide" navButtonsAlwaysVisible={true}>
                 {cardList.map((word: CardProps, index) => <Card key={index}
                                                                 characters={word.characters}

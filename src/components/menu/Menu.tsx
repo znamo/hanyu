@@ -1,7 +1,6 @@
 import React, {KeyboardEvent, MouseEvent, useState, FC} from 'react';
 import {Divider, Drawer, List, ListItem, ListItemIcon, ListItemText} from "@material-ui/core";
-import FingerprintIcon from "@material-ui/icons/Fingerprint";
-import GridOnIcon from "@material-ui/icons/GridOn";
+import {Fingerprint as FingerprintIcon, GridOn as GridOnIcon} from "@material-ui/icons";
 import {useHistory} from "react-router-dom";
 
 interface MenuProps {

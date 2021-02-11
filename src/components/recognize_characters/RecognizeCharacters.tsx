@@ -1,7 +1,7 @@
 import React, {useState, FC} from 'react';
 import units from 'state';
-import CardCarousel from "components/card_carousel/cardCarousel";
-import ControlOptions from "components/control_options/control_options";
+import CardCarousel from "components/card_carousel/CardCarousel";
+import ControlOptions from "components/control_options/ControlOptions";
 import {CardProps, UnitProps} from "types";
 import {Grid} from "@material-ui/core";
 
