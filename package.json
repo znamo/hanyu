@@ -2,7 +2,7 @@
   "name": "hanyu",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://znamo.github.io/hanyu",
+  "homepage": "https://znamo.github.io/hanyu",
   "dependencies": {
     "@material-ui/core": "^4.11.3",
     "@material-ui/icons": "^4.11.2",
