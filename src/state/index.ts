@@ -12,6 +12,8 @@ import unit8a from "./unit8a";
 import unit8b from "./unit8b";
 import unit9a from "./unit9a";
 import unit9b from "./unit9b";
+import unit10a from "./unit10a";
+import unit10b from "./unit10b";
 
 
 const units = [
@@ -28,7 +30,9 @@ const units = [
     {name: 'unit8a', characters: unit8a},
     {name: 'unit8b', characters: unit8b},
     {name: 'unit9a', characters: unit9a},
-    {name: 'unit9b', characters: unit9b}
+    {name: 'unit9b', characters: unit9b},
+    {name: 'unit10a', characters: unit10a},
+    {name: 'unit10b', characters: unit10b}
 ]
 
 export default units

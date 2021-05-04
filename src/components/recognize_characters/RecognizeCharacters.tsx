@@ -26,10 +26,10 @@ const RecognizeCharacters: FC<{}> = () => {
 
     return (
         <Grid container spacing={1}>
-            <Grid item xs={3}>
+            <Grid item xs={12} sm={4}>
                 <ControlOptions units={includedUnits} handleChange={handleChange}/>
             </Grid>
-            <Grid item xs={6}>
+            <Grid item xs={12} sm={8}>
                 <div className="App">
                     <CardCarousel cardList={randomCardList}/>
                 </div>
