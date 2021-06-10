@@ -4,11 +4,12 @@ import {FormControlLabel, FormGroup, FormLabel, Checkbox, FormControl} from "@ma
 
 
 const ControlOptions: React.FC<ControlOptionsProps> = ({units, handleChange}) => {
+    const reversedUnits = [...units].reverse()
     return (
         <FormControl component="fieldset">
             <FormLabel component="legend">Units</FormLabel>
             <FormGroup>
-                {units.map((unit: UnitProps) => (
+                {reversedUnits.map((unit: UnitProps) => (
                     <FormControlLabel key={unit.name}
                         control={<Checkbox checked={unit.include} onChange={handleChange} name={unit.name}/>}
                         label={unit.name}
